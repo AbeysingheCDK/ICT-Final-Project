@@ -29,7 +29,7 @@ public class addNewQuestion {
 
             try{
                 preparedStatement.execute();
-                JOptionPane.showMessageDialog(null, "New questions successfully saved in to the system");
+                JOptionPane.showMessageDialog(null, "New questions successfully added to the system");
 
             }catch (Exception exception){
                 JOptionPane.showMessageDialog(null, "Oops..!!!\n Something went wrong with your submission..!!!" + exception.getMessage());
@@ -45,7 +45,6 @@ public class addNewQuestion {
     private JLabel addNewQuestion;
     private JButton exitButton;
     private JButton SAVEButton;
-    private JButton CLEARButton;
     private JTextField a00TextField;
     private JTextField textField2;
     private JTextField textField3;
