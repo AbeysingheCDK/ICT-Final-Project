@@ -78,7 +78,6 @@ public class updateQuestion {
     private JTextField textField7;
     private JButton searchButton;
     private JButton UPDATEButton;
-    private JButton CLEARButton;
     private JPanel updateQuestionPanel;
     private JFrame updateQuestionFrame;
 
