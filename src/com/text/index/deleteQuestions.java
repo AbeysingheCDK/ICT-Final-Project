@@ -49,7 +49,7 @@ public class deleteQuestions {
 
             try {
                 preparedStatement.execute();
-                JOptionPane.showMessageDialog(null, "Updated question successfully saved in to the system");
+                JOptionPane.showMessageDialog(null, "Selected question successfully deleted from the system");
 
             } catch (Exception exception) {
                 JOptionPane.showMessageDialog(null, "Oops..!!!\n Something went wrong with your submission..!!!" + exception.getMessage());
@@ -73,7 +73,6 @@ public class deleteQuestions {
     private JTextField textField6;
     private JButton searchButton;
     private JButton DELETEButton;
-    private JButton CLEARButton;
     private JPanel deleteQuestionPanel;
     private JFrame deleteQuestionFrame;
 
