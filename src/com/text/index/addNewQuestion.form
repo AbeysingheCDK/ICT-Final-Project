@@ -86,7 +86,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="00"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="24b39" class="javax.swing.JTextField" binding="textField2" default-binding="true">
