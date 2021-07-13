@@ -82,5 +82,12 @@ public class adminHome {
                 new deleteQuestions();
             }
         });
+        allStudentResultsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adminHomeFrame.dispose();
+                new allStudentResult();
+            }
+        });
     }
 }

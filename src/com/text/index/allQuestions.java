@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 
 public class allQuestions {
     private JButton exitButton;
-    private JTable table1;
     private JPanel allQuestionsPanel;
+    private JTable table1;
     private JFrame allQuestionsFrame;
 
 
