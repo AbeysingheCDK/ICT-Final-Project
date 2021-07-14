@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 
 public class addNewQuestion {
@@ -59,7 +58,7 @@ public class addNewQuestion {
     public addNewQuestion() {
         addNewQuestionFrame = new JFrame("Quiz Exam Management System");
         addNewQuestionFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        addNewQuestionFrame.setPreferredSize(new Dimension(600, 500));
+        addNewQuestionFrame.setPreferredSize(new Dimension(700, 700));
         addNewQuestionFrame.setResizable(true);
 
         addNewQuestionFrame.add(addNewQuestionPanel);

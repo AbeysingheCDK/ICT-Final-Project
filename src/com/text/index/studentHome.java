@@ -16,7 +16,7 @@ public class studentHome {
     public studentHome() {
         studentHomeFrame = new JFrame("Quiz Exam Management System");
         studentHomeFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        studentHomeFrame.setPreferredSize(new Dimension(600, 500));
+        studentHomeFrame.setPreferredSize(new Dimension(700, 700));
         studentHomeFrame.setResizable(true);
 
         studentHomeFrame.add(studentHomePanel);

@@ -20,7 +20,7 @@ public class adminHome {
     public adminHome() {
         adminHomeFrame = new JFrame("Quiz Exam Management System");
         adminHomeFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        adminHomeFrame.setPreferredSize(new Dimension(600, 500));
+        adminHomeFrame.setPreferredSize(new Dimension(700, 700));
         adminHomeFrame.setResizable(true);
 
         adminHomeFrame.add(adminHomePanel);

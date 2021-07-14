@@ -16,7 +16,7 @@ public class index {
     public index() {
         indexFrame = new JFrame("Quiz Exam Management System");
         indexFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        indexFrame.setPreferredSize(new Dimension(600, 500));
+        indexFrame.setPreferredSize(new Dimension(700, 700));
         indexFrame.setResizable(true);
 
         indexFrame.add(indexPanel);

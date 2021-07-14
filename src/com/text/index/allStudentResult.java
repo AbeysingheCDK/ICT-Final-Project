@@ -50,7 +50,7 @@ public class allStudentResult {
     public allStudentResult() {
         allStudentResultFrame = new JFrame("Quiz Exam Management System");
         allStudentResultFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        allStudentResultFrame.setPreferredSize(new Dimension(600, 500));
+        allStudentResultFrame.setPreferredSize(new Dimension(700, 700));
         allStudentResultFrame.setResizable(true);
 
         allStudentResultFrame.add(allStudentResultPanel);

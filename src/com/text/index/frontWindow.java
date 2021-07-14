@@ -14,7 +14,7 @@ public class frontWindow {
     public frontWindow() {
         frontWindowFrame = new JFrame("Quiz Exam Management System");
         frontWindowFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        frontWindowFrame.setPreferredSize(new Dimension(600, 500));
+        frontWindowFrame.setPreferredSize(new Dimension(700, 700));
         frontWindowFrame.setResizable(true);
 
         frontWindowFrame.add(frontWindowPanel);

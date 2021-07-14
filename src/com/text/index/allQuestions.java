@@ -58,7 +58,7 @@ public class allQuestions {
 
         allQuestionsFrame = new JFrame("Quiz Exam Management System");
         allQuestionsFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        allQuestionsFrame.setPreferredSize(new Dimension(600, 500));
+        allQuestionsFrame.setPreferredSize(new Dimension(700, 700));
         allQuestionsFrame.setResizable(true);
 
         allQuestionsFrame.add(allQuestionsPanel);

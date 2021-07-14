@@ -18,7 +18,7 @@ public class loginAdmin {
     public loginAdmin() {
         adminFrame = new JFrame("Quiz Exam Management System");
         adminFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        adminFrame.setPreferredSize(new Dimension(600, 500));
+        adminFrame.setPreferredSize(new Dimension(700, 700));
         adminFrame.setResizable(true);
 
         adminFrame.add(adminPanel);

@@ -57,7 +57,7 @@ public class studentDetails {
     public studentDetails() {
         studentDetailsFrame = new JFrame("Quiz Exam Management System");
         studentDetailsFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        studentDetailsFrame.setPreferredSize(new Dimension(600, 500));
+        studentDetailsFrame.setPreferredSize(new Dimension(700, 700));
         studentDetailsFrame.setResizable(true);
 
         studentDetailsFrame.add(studentDetailsPanel);
