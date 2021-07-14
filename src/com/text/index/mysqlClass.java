@@ -11,7 +11,7 @@ public class mysqlClass {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection("jdbc:mysql://localhost/qems", "root","");
-        System.out.println("Database Connected Successfully");
+        System.out.println("Database Successfully Connected");
         return connection;
     }
 
