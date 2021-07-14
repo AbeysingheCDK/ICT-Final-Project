@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 public class studentDetails {
 
@@ -74,7 +73,7 @@ public class studentDetails {
                 if (a == 0)
                 {
                     studentDetailsFrame.dispose();
-                    new index();
+                    new studentHome();
                 }
 
             }

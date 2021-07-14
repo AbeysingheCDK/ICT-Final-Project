@@ -56,7 +56,7 @@ public class studentHome {
             @Override
             public void actionPerformed(ActionEvent e) {
                 studentHomeFrame.dispose();
-                new quizExam();
+                new quizPage();
             }
         });
     }
