@@ -1,8 +1,10 @@
 package com.text.index;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 
 public class quizPage {
@@ -24,6 +26,20 @@ public class quizPage {
 
 
     public quizPage() {
+
+
+        quizPageFrame = new JFrame("Quiz Exam Management System");
+        quizPageFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+        quizPageFrame.setPreferredSize(new Dimension(600, 500));
+        quizPageFrame.setResizable(true);
+
+        quizPageFrame.add(quizPagePanel);
+
+        quizPageFrame.pack();
+        quizPageFrame.setLocationRelativeTo(null);
+        quizPageFrame.setVisible(true);
+
+
         EXITButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
