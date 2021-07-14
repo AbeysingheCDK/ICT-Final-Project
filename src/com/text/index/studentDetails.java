@@ -10,16 +10,16 @@ import java.sql.SQLException;
 
 public class studentDetails {
 
-    public void studentRegistration(int roll_num, String first_name, String name_initials, String address, String con_number, String gender, String email ){
+    public void studentRegistration(String reg_no, String name, String address, String con_number, String gender, String email ){
 
         try{
             Connection connection = mysqlClass.getConnection();
-            String sqlQuery = "INSERT INTO `student` (`roll_no`, `first_name`, `name_with_initials`, `address`, `contact_number`, `gender`, `email`) VALUES (NULL, ?, ?, ?, ?, ?, ?)";
+            String sqlQuery = "INSERT INTO `student_reg`(`roll_no`, `reg_no`, `stu_name`, `address`, `tp`, `gender`, `email`) VALUES (null,?,?,?,?,?,?)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
             //preparedStatement.setString(1, String.valueOf(Integer.valueOf(roll_num)));
-            preparedStatement.setString(1, first_name);
-            preparedStatement.setString(2, name_initials);
+            preparedStatement.setString(1, reg_no);
+            preparedStatement.setString(2, name);
             preparedStatement.setString(3, address);
             preparedStatement.setString(4, con_number);
             preparedStatement.setString(5, gender);
@@ -92,20 +92,19 @@ public class studentDetails {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                String first_name, name_initials, address, con_number, gender, email;
+                String reg_no, name, address, con_number, gender, email;
                 int roll_num;
                 JFrame msgFrame = new JFrame();
 
-                roll_num = Integer.parseInt(textField1.getText());
-                first_name = textField2.getText();
-                name_initials = textField3.getText();
-                address = textField4.getText();
-                con_number = textField5.getText();
+                reg_no= textField1.getText();
+                name = textField2.getText();
+                address = textField3.getText();
+                con_number = textField4.getText();
                 gender = comboBox1.getSelectedItem().toString();
-                email = textField6.getText();
+                email = textField5.getText();
 
                 try{
-                    studentRegistration(roll_num, first_name, name_initials, address, con_number, gender, email);
+                    studentRegistration(reg_no, name, address, con_number, gender, email);
                 } catch (Exception exception) {
                     exception.printStackTrace();
                 }
@@ -114,9 +113,9 @@ public class studentDetails {
                 textField2.setText("");
                 textField3.setText("");
                 textField4.setText("");
-                textField5.setText("");
                 comboBox1.setSelectedItem("");
-                textField6.setText("");
+                textField5.setText("");
+
 
             }
         });
