@@ -80,7 +80,7 @@ public class deleteQuestions {
     public deleteQuestions() {
         deleteQuestionFrame = new JFrame("Quiz Exam Management System");
         deleteQuestionFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        deleteQuestionFrame.setPreferredSize(new Dimension(700, 700));
+        deleteQuestionFrame.setPreferredSize(new Dimension(1500, 1000));
         deleteQuestionFrame.setResizable(true);
 
         deleteQuestionFrame.add(deleteQuestionPanel);
