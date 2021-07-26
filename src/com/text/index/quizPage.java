@@ -168,7 +168,7 @@ public class quizPage {
 
         quizPageFrame = new JFrame("Quiz Exam Management System");
         quizPageFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        quizPageFrame.setPreferredSize(new Dimension(700, 700));
+        quizPageFrame.setPreferredSize(new Dimension(1500, 1000));
         quizPageFrame.setResizable(true);
 
         quizPageFrame.add(quizPagePanel);
