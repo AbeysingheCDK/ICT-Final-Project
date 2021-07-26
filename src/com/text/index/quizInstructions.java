@@ -13,7 +13,7 @@ public class quizInstructions {
     public quizInstructions() {
         quizInstructionFrame = new JFrame("Quiz Exam Management System");
         quizInstructionFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        quizInstructionFrame.setPreferredSize(new Dimension(700, 700));
+        quizInstructionFrame.setPreferredSize(new Dimension(1500, 1000));
         quizInstructionFrame.setResizable(true);
 
         quizInstructionFrame.add(quizInstructionPanel);
