@@ -84,7 +84,7 @@ public class updateQuestion {
     public updateQuestion() {
         updateQuestionFrame = new JFrame("Quiz Exam Management System");
         updateQuestionFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        updateQuestionFrame.setPreferredSize(new Dimension(700, 700));
+        updateQuestionFrame.setPreferredSize(new Dimension(1500, 1000));
         updateQuestionFrame.setResizable(true);
 
         updateQuestionFrame.add(updateQuestionPanel);
