@@ -14,7 +14,7 @@ public class allStudentResult {
     public void showAllResults(){
         try {
             Connection connection = mysqlClass.getConnection();
-            String sqlQuery = "SELECT * FROM `student_result`";
+            String sqlQuery = "SELECT * FROM `all_result`";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
 
@@ -23,14 +23,15 @@ public class allStudentResult {
 
             table1.setModel(new DefaultTableModel(
                     null,
-                    new String[] {"Roll Number", "Student Name", "Result"}
+                    new String[] {"Roll Number", "AR Number", "Student Name", "Result"}
             ));
             while (resultSet.next()){
                 String roll_num = resultSet.getString(1);
-                String stu_name = resultSet.getString(2);
-                String stu_result = resultSet.getString(3);
+                String ar_number = resultSet.getString(2);
+                String stu_name = resultSet.getString(3);
+                String stu_result = resultSet.getString(4);
 
-                String data[] = {roll_num, stu_name, stu_result};
+                String data[] = {roll_num,ar_number, stu_name, stu_result};
                 DefaultTableModel tableModel = (DefaultTableModel) table1.getModel();
                 tableModel.addRow(data);
             }
@@ -50,7 +51,7 @@ public class allStudentResult {
     public allStudentResult() {
         allStudentResultFrame = new JFrame("Quiz Exam Management System");
         allStudentResultFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        allStudentResultFrame.setPreferredSize(new Dimension(700, 700));
+        allStudentResultFrame.setPreferredSize(new Dimension(1500, 1000));
         allStudentResultFrame.setResizable(true);
 
         allStudentResultFrame.add(allStudentResultPanel);
