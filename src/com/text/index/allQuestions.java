@@ -2,14 +2,13 @@ package com.text.index;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class allQuestions {
+public class allQuestions extends myFrameset {
 
     public void showAllQuestions(){
         try {
@@ -51,21 +50,12 @@ public class allQuestions {
     private JButton exitButton;
     private JPanel allQuestionsPanel;
     private JTable table1;
-    private JFrame allQuestionsFrame;
+    private JFrame allQuestionsFrame = null;
 
 
     public allQuestions() {
 
-        allQuestionsFrame = new JFrame("Quiz Exam Management System");
-        allQuestionsFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        allQuestionsFrame.setPreferredSize(new Dimension(1500, 1000));
-        allQuestionsFrame.setResizable(true);
-
-        allQuestionsFrame.add(allQuestionsPanel);
-
-        allQuestionsFrame.pack();
-        allQuestionsFrame.setLocationRelativeTo(null);
-        allQuestionsFrame.setVisible(true);
+        allQuestionsFrame = setFrame(allQuestionsPanel, allQuestionsFrame);
 
         showAllQuestions();
 

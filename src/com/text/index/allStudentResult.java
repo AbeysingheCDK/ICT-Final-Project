@@ -2,14 +2,13 @@ package com.text.index;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class allStudentResult {
+public class allStudentResult extends myFrameset{
 
     public void showAllResults(){
         try {
@@ -46,20 +45,10 @@ public class allStudentResult {
     private JTable table1;
     private JButton EXITButton;
     private JPanel allStudentResultPanel;
-    private JFrame allStudentResultFrame;
+    private JFrame allStudentResultFrame = null;
 
     public allStudentResult() {
-        allStudentResultFrame = new JFrame("Quiz Exam Management System");
-        allStudentResultFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        allStudentResultFrame.setPreferredSize(new Dimension(1500, 1000));
-        allStudentResultFrame.setResizable(true);
-
-        allStudentResultFrame.add(allStudentResultPanel);
-
-        allStudentResultFrame.pack();
-        allStudentResultFrame.setLocationRelativeTo(null);
-        allStudentResultFrame.setVisible(true);
-
+        allStudentResultFrame = setFrame(allStudentResultPanel, allStudentResultFrame);
         showAllResults();
 
 

@@ -1,29 +1,19 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class index {
+public class index extends myFrameset{
     private JButton EXITButton;
     private JButton ADMINButton;
     private JButton STUDENTButton;
     private JPanel indexPanel;
-    private final JFrame indexFrame;
+    private JFrame indexFrame = null;
 
 
     public index() {
-        indexFrame = new JFrame("Quiz Exam Management System");
-        indexFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        indexFrame.setPreferredSize(new Dimension(1500, 1000));
-        indexFrame.setResizable(true);
-
-        indexFrame.add(indexPanel);
-
-        indexFrame.pack();
-        indexFrame.setLocationRelativeTo(null);
-        indexFrame.setVisible(true);
+        indexFrame = setFrame(indexPanel, indexFrame);
 
 
         EXITButton.addActionListener(new ActionListener() {

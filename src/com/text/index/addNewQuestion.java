@@ -1,14 +1,13 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 
-public class addNewQuestion {
+public class addNewQuestion extends myFrameset{
 
     public void studentRegistration(int questionID, String question, String option1, String option2, String option3, String option4, String answer ){
 
@@ -52,21 +51,11 @@ public class addNewQuestion {
     private JTextField textField6;
     private JTextField textField7;
     private JPanel addNewQuestionPanel;
-    private JFrame addNewQuestionFrame;
+    private JFrame addNewQuestionFrame = null;
 
 
     public addNewQuestion() {
-        addNewQuestionFrame = new JFrame("Quiz Exam Management System");
-        addNewQuestionFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        addNewQuestionFrame.setPreferredSize(new Dimension(1500, 1000));
-        addNewQuestionFrame.setResizable(true);
-
-        addNewQuestionFrame.add(addNewQuestionPanel);
-
-        addNewQuestionFrame.pack();
-        addNewQuestionFrame.setLocationRelativeTo(null);
-        addNewQuestionFrame.setVisible(true);
-
+        addNewQuestionFrame = setFrame(addNewQuestionPanel,addNewQuestionFrame);
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -1,13 +1,12 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-public class studentDetails {
+public class studentDetails extends myFrameset{
 
     public void studentRegistration(String reg_no, String name, String address, String con_number, String gender, String email ){
 
@@ -51,20 +50,11 @@ public class studentDetails {
     private JButton SAVEButton;
     private JButton NEXTButton;
     private JPanel studentDetailsPanel;
-    private JFrame studentDetailsFrame;
+    private JFrame studentDetailsFrame = null;
 
 
     public studentDetails() {
-        studentDetailsFrame = new JFrame("Quiz Exam Management System");
-        studentDetailsFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        studentDetailsFrame.setPreferredSize(new Dimension(1500, 1000));
-        studentDetailsFrame.setResizable(true);
-
-        studentDetailsFrame.add(studentDetailsPanel);
-
-        studentDetailsFrame.pack();
-        studentDetailsFrame.setLocationRelativeTo(null);
-        studentDetailsFrame.setVisible(true);
+        studentDetailsFrame = setFrame(studentDetailsPanel, studentDetailsFrame);
 
         BACKButton.addActionListener(new ActionListener() {
             @Override

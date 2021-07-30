@@ -1,31 +1,20 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class loginAdmin {
+public class loginAdmin extends myFrameset {
     private JTextField qemsTextField;
     private JPasswordField adminPasswordField;
     private JButton LOGINButton;
     private JButton BACKButton;
     private JPanel adminPanel;
-    private JFrame adminFrame;
+    private JFrame adminFrame = null;
 
 
     public loginAdmin() {
-        adminFrame = new JFrame("Quiz Exam Management System");
-        adminFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        adminFrame.setPreferredSize(new Dimension(1500, 1000));
-        adminFrame.setResizable(true);
-
-        adminFrame.add(adminPanel);
-
-        adminFrame.pack();
-        adminFrame.setLocationRelativeTo(null);
-        adminFrame.setVisible(true);
-
+        adminFrame = setFrame(adminPanel, adminFrame);
         BACKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

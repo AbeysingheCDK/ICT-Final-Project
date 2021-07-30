@@ -1,11 +1,10 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class adminHome {
+public class adminHome extends myFrameset{
     private JButton addNewQuestionButton;
     private JButton updateQuestionButton;
     private JButton allQuestionButton;
@@ -14,20 +13,11 @@ public class adminHome {
     private JButton logoutButton;
     private JButton exitButton;
     private JPanel adminHomePanel;
-    private JFrame adminHomeFrame;
+    private JFrame adminHomeFrame = null;
 
 
     public adminHome() {
-        adminHomeFrame = new JFrame("Quiz Exam Management System");
-        adminHomeFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        adminHomeFrame.setPreferredSize(new Dimension(1500, 1000));
-        adminHomeFrame.setResizable(true);
-
-        adminHomeFrame.add(adminHomePanel);
-
-        adminHomeFrame.pack();
-        adminHomeFrame.setLocationRelativeTo(null);
-        adminHomeFrame.setVisible(true);
+        adminHomeFrame = setFrame(adminHomePanel, adminHomeFrame);
 
         logoutButton.addActionListener(new ActionListener() {
             @Override

@@ -1,30 +1,19 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class studentHome {
+public class studentHome extends myFrameset{
     private JButton FILLUPSTUDENTDETAILSButton;
     private JButton STARTQUIZButton;
     private JButton EXITButton;
     private JPanel studentHomePanel;
     private JButton QUIZEINSTRUCTIONButton;
-    private JFrame studentHomeFrame;
+    private JFrame studentHomeFrame = null;
 
     public studentHome() {
-        studentHomeFrame = new JFrame("Quiz Exam Management System");
-        studentHomeFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        studentHomeFrame.setPreferredSize(new Dimension(1500, 1000));
-        studentHomeFrame.setResizable(true);
-
-        studentHomeFrame.add(studentHomePanel);
-
-        studentHomeFrame.pack();
-        studentHomeFrame.setLocationRelativeTo(null);
-        studentHomeFrame.setVisible(true);
-
+        studentHomeFrame = setFrame(studentHomePanel, studentHomeFrame);
 
         EXITButton.addActionListener(new ActionListener() {
             @Override

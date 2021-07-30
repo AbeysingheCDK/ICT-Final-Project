@@ -2,7 +2,6 @@ package com.text.index;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -11,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 
-public class quizPage {
+public class quizPage extends myFrameset{
 
     String stu_answers[] = new String[10];
     int correct_answers = 0;
@@ -161,21 +160,12 @@ public class quizPage {
     private JTextField textField11;
     private JTextField textField12;
     private JLabel marks;
-    private JFrame quizPageFrame;
+    private JFrame quizPageFrame = null;
 
 
     public quizPage() {
 
-        quizPageFrame = new JFrame("Quiz Exam Management System");
-        quizPageFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        quizPageFrame.setPreferredSize(new Dimension(1500, 1000));
-        quizPageFrame.setResizable(true);
-
-        quizPageFrame.add(quizPagePanel);
-
-        quizPageFrame.pack();
-        quizPageFrame.setLocationRelativeTo(null);
-        quizPageFrame.setVisible(true);
+        quizPageFrame = setFrame(quizPagePanel, quizPageFrame);
 
         showAllQuestions();
 

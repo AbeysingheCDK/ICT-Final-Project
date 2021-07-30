@@ -1,14 +1,13 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class updateQuestion {
+public class updateQuestion extends myFrameset{
 
     public void searchQuestion(String queID) throws Exception {
 
@@ -78,20 +77,11 @@ public class updateQuestion {
     private JButton searchButton;
     private JButton UPDATEButton;
     private JPanel updateQuestionPanel;
-    private JFrame updateQuestionFrame;
+    private JFrame updateQuestionFrame = null;
 
 
     public updateQuestion() {
-        updateQuestionFrame = new JFrame("Quiz Exam Management System");
-        updateQuestionFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        updateQuestionFrame.setPreferredSize(new Dimension(1500, 1000));
-        updateQuestionFrame.setResizable(true);
-
-        updateQuestionFrame.add(updateQuestionPanel);
-
-        updateQuestionFrame.pack();
-        updateQuestionFrame.setLocationRelativeTo(null);
-        updateQuestionFrame.setVisible(true);
+        updateQuestionFrame = setFrame(updateQuestionPanel, updateQuestionFrame);
 
 
         exitButton.addActionListener(new ActionListener() {

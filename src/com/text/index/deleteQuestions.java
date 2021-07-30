@@ -1,14 +1,13 @@
 package com.text.index;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class deleteQuestions {
+public class deleteQuestions extends myFrameset{
 
     public void searchQuestion(String queID) throws Exception {
 
@@ -74,20 +73,11 @@ public class deleteQuestions {
     private JButton searchButton;
     private JButton DELETEButton;
     private JPanel deleteQuestionPanel;
-    private JFrame deleteQuestionFrame;
+    private JFrame deleteQuestionFrame = null;
 
 
     public deleteQuestions() {
-        deleteQuestionFrame = new JFrame("Quiz Exam Management System");
-        deleteQuestionFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        deleteQuestionFrame.setPreferredSize(new Dimension(1500, 1000));
-        deleteQuestionFrame.setResizable(true);
-
-        deleteQuestionFrame.add(deleteQuestionPanel);
-
-        deleteQuestionFrame.pack();
-        deleteQuestionFrame.setLocationRelativeTo(null);
-        deleteQuestionFrame.setVisible(true);
+        deleteQuestionFrame = setFrame(deleteQuestionPanel, deleteQuestionFrame);
 
 
         exitButton.addActionListener(new ActionListener() {
